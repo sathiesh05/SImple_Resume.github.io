@@ -1,0 +1,243 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.navbar {
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.navbar ul li {
+    margin: 0;
+}
+.navbar ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+.navbar ul li a:hover {
+    background-color: #575757;
+    border-radius: 4px;
+    text-align: center;
+}
+.hamburger {
+    display: none;
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+}
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        width: 100%;
+        display: none; 
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .navbar ul.show {
+        display: flex; 
+    }
+    .navbar ul li {
+        width: 100%;
+        text-align: center;
+    }
+    .navbar ul li a {
+        padding: 10px;
+        border-radius: 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+.container {
+    max-width: 900px;
+    margin: 100px auto 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+    border: 2px solid #ddd;
+}
+
+.header-text h1 {
+    margin-bottom: 10px;
+}
+
+.header-text h2, .header-text h3, .header-text h4 {
+    margin-bottom: 5px;
+}
+
+.header-text p {
+    margin: 5px 0;
+    font-size: 1em;
+}
+
+.header-text i {
+    margin-right: 8px;
+    color: #0066cc;
+}
+
+.block {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.project-container {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px 0;
+    gap: 20px; 
+}
+
+.project {
+    flex: 0 0 auto; 
+    width: 250px; 
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.project-img {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.project-container::-webkit-scrollbar {
+    display: none;
+}
+
+.project-container {
+    scrollbar-width: none; 
+}
+
+h1, h2, h3, h4 {
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+.table-container {
+    overflow-x: auto; 
+}
+
+table {
+    width: 100%;
+    border: none;
+}
+
+.table-container::-webkit-scrollbar {
+    display: none;
+}
+.table-container {
+    scrollbar-width: none;
+}
+
+ul {
+    list-style-type: square;
+    margin-left: 20px;
+}
+.signature {
+    margin-top: 40px;
+    text-align: right;
+    font-style: italic;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #003366;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-pic {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .table-container {
+        overflow-x: auto;
+    }
+}
