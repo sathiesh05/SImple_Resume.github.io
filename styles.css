@@ -7,7 +7,7 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    margin: 0;
+    margin: 5px;
     background-color: #f4f4f4;
     color: #333;
     background-image: url('images/background.jpg');
@@ -240,4 +240,14 @@ a:hover {
     .table-container {
         overflow-x: auto;
     }
+}
+footer{
+    background-color: rgb(64, 0, 255);
+    color: white;
+    text-align: center;
+}
+header{
+    background-color: rgb(64, 0, 255);
+    color: white;
+    text-align: center;
 }
