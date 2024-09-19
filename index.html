@@ -6,6 +6,7 @@
     <title>Resume - R. Sathiesh Prabhu</title>
     <link rel="stylesheet" href="web.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
     <nav class="navbar">
@@ -35,6 +36,7 @@
                 <p><i class="fas fa-envelope"></i> Email: <a href="mailto:sathieshprabhu2005@gmail.com">sathieshprabhu2005@gmail.com</a></p>
                 <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/sathieshprabhu">Sathiesh Prabhu</a></p>
                 <p><i class="fab fa-github"></i>Github: <a href="https://github.com/sathiesh05">sathiesh05</a></p>
+                <p><i class="fab fa-code"></i> LeetCode: <a href="https://leetcode.com/sathiesh_3105">sathiesh_3105</a></p>
             </div>
         </div>
 
@@ -162,6 +164,14 @@
 
     <footer>
         <p><marquee>&copy; Sathiesh Prabhu Resume</marquee></p>
+        <form id="feedback-form" method="POST">
+            <h3>Your Feedback</h3>
+            <input type="text" id="feedback-name" name="name" placeholder="Your Name" required><br>
+            <input type="email" id="feedback-email" name="email" placeholder="Your Email" required><br>
+            <input type="text" id="feedback-subject" name="subject" placeholder="Subject" required><br>
+            <textarea id="feedback-text" name="message" placeholder="Enter your feedback here..." required></textarea><br>
+            <button type="submit">Submit Feedback</button><br>
+        </form>
     </footer>
     <script>
         function toggleMenu() {
@@ -178,6 +188,22 @@
                 if (event.target.tagName === 'A') {
                     navLinks.classList.remove('show');
                 }
+            });
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            const feedbackForm = document.getElementById('feedback-form');
+
+            feedbackForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                const name = document.getElementById('feedback-name').value;
+                const email = document.getElementById('feedback-email').value;
+                const subject = document.getElementById('feedback-subject').value;
+                const message = document.getElementById('feedback-text').value;
+
+                alert(`Feedback Submitted!\n\nName: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`);
+
+                feedbackForm.reset();
             });
         });
     </script>

@@ -241,10 +241,44 @@ a:hover {
         overflow-x: auto;
     }
 }
-footer{
-    background-color: rgb(64, 0, 255);
-    color: white;
+footer {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin-top: 20px;
+}
+#feedback-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+#feedback-form h3 {
     text-align: center;
+    color: #333;
+}
+#feedback-form input[type="text"],
+#feedback-form input[type="email"],
+#feedback-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+#feedback-form textarea {
+    height: 100px;
+    resize: vertical;
+}
+#feedback-form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+#feedback-form button:hover {
+    background-color: #45a049;
 }
 header{
     background-color: rgb(64, 0, 255);
