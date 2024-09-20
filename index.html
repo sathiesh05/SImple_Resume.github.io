@@ -24,7 +24,7 @@
             <li><a href="#personal">Personal Details</a></li>
             <li><a href="#declaration">Declaration</a></li>
         </ul>
-    </nav>  
+    </nav> 
     <div class="container">
         <div class="header">
             <img src="images/profile.jpg" alt="Profile Picture" class="profile-pic">
@@ -163,7 +163,7 @@
     </div>
 
     <footer>
-        <p><marquee>&copy; Sathiesh Prabhu Resume</marquee></p>
+        <marquee>&copy; Sathiesh Prabhu Resume</marquee>
         <form id="feedback-form" method="POST">
             <h3>Your Feedback</h3>
             <input type="text" id="feedback-name" name="name" placeholder="Your Name" required><br>
@@ -180,29 +180,26 @@
         }
         document.addEventListener('DOMContentLoaded', function() {
             const hamburgerMenu = document.getElementById('hamburger-menu');
-            const navLinks = document.getElementById('nav-links');
+            const navLinks = document.getElementById('nav-links');    
             hamburgerMenu.addEventListener('click', function() {
                 navLinks.classList.toggle('show');
             });
-            navLinks.addEventListener('click', function(event) {
-                if (event.target.tagName === 'A') {
+            // Collapse the menu when a link is clicked
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', function() {
                     navLinks.classList.remove('show');
-                }
+                });
             });
         });
         document.addEventListener('DOMContentLoaded', function() {
             const feedbackForm = document.getElementById('feedback-form');
-
             feedbackForm.addEventListener('submit', function(e) {
                 e.preventDefault();
-
                 const name = document.getElementById('feedback-name').value;
                 const email = document.getElementById('feedback-email').value;
                 const subject = document.getElementById('feedback-subject').value;
                 const message = document.getElementById('feedback-text').value;
-
                 alert(`Feedback Submitted!\n\nName: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`);
-
                 feedbackForm.reset();
             });
         });
