@@ -136,15 +136,18 @@ body {
 }
 .project-container {
     display: flex;
-    overflow-x: auto;
+    overflow-x: auto; 
     padding: 10px 0;
     gap: 20px; 
+    scrollbar-width: thin; 
+    scrollbar-color: #888 #f4f4f4; 
+    position: relative;
 }
 .project {
     flex: 0 0 auto; 
-    width: 250px; 
+    width: 300px; 
     background-color: #ffffff;
-    border: 1px solid #ddd;
+    border: 3px solid #ddd;
     border-radius: 8px;
     padding: 10px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -158,9 +161,36 @@ body {
 }
 .project-container::-webkit-scrollbar {
     display: none;
+    height: 8px;
+}
+.project-container::-webkit-scrollbar-thumb {
+    background-color: #888; 
+    border-radius: 10px; 
+}
+.project-container::-webkit-scrollbar-track {
+    background: #f4f4f4; 
 }
 .project-container {
     scrollbar-width: none; 
+}
+.scroll-btn {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    cursor: pointer;
+    font-size: 10px;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin: 0 10px;
+}
+.project-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers the navigation buttons */
+    position: relative;
+}
+.scroll-btn:hover {
+    background-color: rgba(255, 255, 255, 0.9);
 }
 h1, h2, h3, h4 {
     color: #333;
@@ -214,6 +244,9 @@ a:hover {
     .header {
         flex-direction: column;
         align-items: center;
+    }
+    .project-container {
+        overflow-x: scroll; 
     }
     .profile-pic {
         margin-right: 0;

@@ -88,27 +88,38 @@
 
         <div class="block" id="projects">
             <h2>Mini Projects</h2>
-            <div class="project-container">
-                <div class="project">
-                    <h3>Chest X-ray with CNN Classification (4th semester)</h3>
-                    <img src="images/project1.jpg" alt="Chest X-ray CNN Classification" class="project-img"><hr>
-                    <p>This project involves developing a deep learning model to classify chest X-ray images into normal and pneumonia-affected categories. The model uses a Convolutional Neural Network (CNN) built with TensorFlow and Keras.</p>
+            <div class="project-navigation">
+                <button class="scroll-btn left" id="scroll-left">&#9664;</button>
+                <div class="project-container">
+                    <div class="project-container">
+                        <div class="project">
+                            <h3>Chest X-ray with CNN Classification (4th semester)</h3>
+                            <img src="images/project1.jpg" alt="Chest X-ray CNN Classification" class="project-img"><hr>
+                            <p>This project involves developing a deep learning model to classify chest X-ray images into normal and pneumonia-affected categories. The model uses a Convolutional Neural Network (CNN) built with TensorFlow and Keras.</p>
+                        </div>
+                        <div class="project">
+                            <h3>Insurance Data Analysis (4th semester)</h3>
+                            <img src="images/project2.jpg" alt="Insurance Data Analysis" class="project-img"><hr>
+                            <p>This project aims to evaluate and predict the best insurance company by analyzing various performance metrics and customer satisfaction data. The analysis involves collecting data on multiple insurance companies, including metrics such as claim settlement ratio, customer reviews, policy offerings, premium costs, and financial stability.</p>
+                        </div>
+                        <div class="project">
+                            <h3>Transport Data System Management (3rd semester)</h3>
+                            <img src="images/project3.jpg" alt="Transport Data System Management" class="project-img"><hr>
+                            <p>This project focuses on developing a comprehensive transport data management system utilizing Python and MySQL to streamline and optimize transportation operations. The system aims to manage and analyze transport data, including vehicle details, routes, schedules, and driver information.</p>
+                        </div>
+                        <div class="project">
+                            <h3>Banking Management in Linked List (3rd semester)</h3>
+                            <img src="images/project4.jpg" alt="Banking Management in Linked List" class="project-img"><hr>
+                            <p>This project involves developing a banking management system utilizing linked lists to manage customer accounts and transactions. The system is designed to handle various banking operations, including account creation, balance checking, deposits, withdrawals, and transaction history.</p>
+                        </div>
+                        <div class="project">
+                            <h3>Chat-with-pdf(LLaMa-3-RAG-PDF)</h3>
+                            <img src="images/chat_pdf.jpeg" alt="Chat-with-pdf" class="project-img"><hr>
+                            <p>This project contains a Streamlit-based web application for interacting with machine learning models and vector databases.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="project">
-                    <h3>Insurance Data Analysis (4th semester)</h3>
-                    <img src="images/project2.jpg" alt="Insurance Data Analysis" class="project-img"><hr>
-                    <p>This project aims to evaluate and predict the best insurance company by analyzing various performance metrics and customer satisfaction data. The analysis involves collecting data on multiple insurance companies, including metrics such as claim settlement ratio, customer reviews, policy offerings, premium costs, and financial stability.</p>
-                </div>
-                <div class="project">
-                    <h3>Transport Data System Management (3rd semester)</h3>
-                    <img src="images/project3.jpg" alt="Transport Data System Management" class="project-img"><hr>
-                    <p>This project focuses on developing a comprehensive transport data management system utilizing Python and MySQL to streamline and optimize transportation operations. The system aims to manage and analyze transport data, including vehicle details, routes, schedules, and driver information.</p>
-                </div>
-                <div class="project">
-                    <h3>Banking Management in Linked List (3rd semester)</h3>
-                    <img src="images/project4.jpg" alt="Banking Management in Linked List" class="project-img"><hr>
-                    <p>This project involves developing a banking management system utilizing linked lists to manage customer accounts and transactions. The system is designed to handle various banking operations, including account creation, balance checking, deposits, withdrawals, and transaction history.</p>
-                </div>
+                <button class="scroll-btn right" id="scroll-right">&#9654;</button>
             </div>
         </div>
         <div class="block" id="certificates">
@@ -184,7 +195,6 @@
             hamburgerMenu.addEventListener('click', function() {
                 navLinks.classList.toggle('show');
             });
-            // Collapse the menu when a link is clicked
             navLinks.querySelectorAll('a').forEach(link => {
                 link.addEventListener('click', function() {
                     navLinks.classList.remove('show');
@@ -201,6 +211,22 @@
                 const message = document.getElementById('feedback-text').value;
                 alert(`Feedback Submitted!\n\nName: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`);
                 feedbackForm.reset();
+            });
+        });
+        document.getElementById('scroll-left').addEventListener('click', function() {
+            const container = document.querySelector('.project-container');
+            container.scrollBy({
+                top: 0,
+                left: -300, 
+                behavior: 'smooth'
+            });
+        });
+        document.getElementById('scroll-right').addEventListener('click', function() {
+            const container = document.querySelector('.project-container');
+            container.scrollBy({
+                top: 0,
+                left: 300, 
+                behavior: 'smooth'
             });
         });
     </script>
