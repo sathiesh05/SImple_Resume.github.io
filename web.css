@@ -138,7 +138,7 @@ body {
     overflow-x: auto; 
     padding: 10px 0;
     gap: 20px; 
-    scrollbar-width: thin; 
+    scrollbar-width: 10px; 
     scrollbar-color: #888 #f4f4f4; 
     position: relative;
 }
@@ -170,7 +170,7 @@ body {
     background: #f4f4f4; 
 }
 .project-container {
-    scrollbar-width: none; 
+    scrollbar-width: 10px; 
 }
 .scroll-btn {
     background-color: rgba(255, 255, 255, 0.7);
