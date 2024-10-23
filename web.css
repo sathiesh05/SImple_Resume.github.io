@@ -182,7 +182,7 @@ body {
 .project-navigation {
     display: flex;
     align-items: center;
-    justify-content: center; /* Centers the navigation buttons */
+    justify-content: center;
     position: relative;
 }
 .scroll-btn:hover {
