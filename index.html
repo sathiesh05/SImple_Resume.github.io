@@ -24,6 +24,10 @@
             <li><a href="#personal">Personal Details</a></li>
             <li><a href="#declaration">Declaration</a></li>
         </ul>
+        <a href="images/Resume.pdf" download class="download-btn">
+            <i class="fas fa-download"></i>
+            Download Resume
+        </a>
     </nav> 
     <div class="container">
         <div class="header">
@@ -37,6 +41,11 @@
                 <p><i class="fas fa-envelope"></i> Outlook: <a href="mailto:sathieshprabhu2005@outlook.com">sathieshprabhu2005@outlook.com</a></p>
                 <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/sathieshprabhu"><abbr title="https://www.linkedin.com/in/sathieshprabhu">Sathiesh Prabhu</abbr></a></p>
                 <p><i class="fab fa-github"></i>Github: <a href="https://github.com/sathiesh05"><abbr title="https://github.com/sathiesh05">sathiesh05</abbr></a></p>
+                <p><i class="fas fa-phone"></i> Phone: +91 6363612570</p>
+                <a href="images/Resume.pdf" download class="download-btn">
+                    <i class="fas fa-download"></i>
+                    Download Resume
+                </a>
             </div>
         </div>
 
@@ -193,33 +202,33 @@
     </footer>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-        const hamburgerMenu = document.getElementById('hamburger-menu');
-        const navLinks = document.getElementById('nav-links');
-        hamburgerMenu.addEventListener('click', function(e) {
-            e.stopPropagation();
-            navLinks.classList.toggle('show');
-        });
-        document.addEventListener('click', function(e) {
-            if (!navLinks.contains(e.target) && !hamburgerMenu.contains(e.target)) {
-                navLinks.classList.remove('show');
-            }
-        });
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', function() {
-                if (window.innerWidth <= 768) {
+            const hamburgerMenu = document.getElementById('hamburger-menu');
+            const navLinks = document.getElementById('nav-links');
+            hamburgerMenu.addEventListener('click', function(e) {
+                e.stopPropagation();
+                navLinks.classList.toggle('show');
+            });
+            document.addEventListener('click', function(e) {
+                if (!navLinks.contains(e.target) && !hamburgerMenu.contains(e.target)) {
                     navLinks.classList.remove('show');
                 }
             });
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', function() {
+                    if (window.innerWidth <= 768) {
+                        navLinks.classList.remove('show');
+                    }
+                });
+            });
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) {
+                    navLinks.classList.remove('show');
+                    navLinks.style.display = 'flex';
+                } else {
+                    navLinks.style.display = navLinks.classList.contains('show') ? 'flex' : 'none';
+                }
+            });
         });
-        window.addEventListener('resize', function() {
-            if (window.innerWidth > 768) {
-                navLinks.classList.remove('show');
-                navLinks.style.display = 'flex';
-            } else {
-                navLinks.style.display = navLinks.classList.contains('show') ? 'flex' : 'none';
-            }
-        });
-    });
         document.addEventListener('DOMContentLoaded', function() {
             const feedbackForm = document.getElementById('feedback-form');
             feedbackForm.addEventListener('submit', function(e) {
@@ -231,6 +240,9 @@
                 alert(`Feedback Submitted!\n\nName: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`);
                 feedbackForm.reset();
             });
+        });
+        document.querySelector('.download-btn').addEventListener('click', function() {
+            console.log('Resume downloaded');
         });
     </script>
 </body>

@@ -149,6 +149,39 @@ body {
         font-size: 15px;
     }
 }
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-left: 20px;
+}
+
+.download-btn:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.download-btn i {
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    .download-btn {
+        margin: 10px 20px;
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
 .container {
     margin-top: 80px;
     max-width: 900px;
