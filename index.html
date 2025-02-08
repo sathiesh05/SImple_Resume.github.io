@@ -11,7 +11,7 @@
 <body>
     <nav class="navbar">
         <div class="hamburger" id="hamburger-menu">
-            <i class="fas fa-bars"></i>
+            <i class="fas fa-ellipsis-v fa-lg"></i>
         </div>
         <ul id="nav-links">
             <li><a href="#objective">Objective</a></li>
@@ -80,31 +80,27 @@
         <div class="block" id="skills">
             <h2>Technical Skills and Computer Knowledge</h2>
             <ul>
-                <li>MS Office – Word, PowerPoint, Excel</li>
-                <li>Programming and Language – Python, JAVA, C, C++, HTML, CSS</li>
+                <li>Programming and Language - Python, JAVA, C, C++, HTML, CSS, JAVASCRIPT</li>
+                <li>Web Page Development using HTML, CSS and JAVASCRIPT</li>
                 <li>Design in Canva</li>
+                <li>Databases - MySQL, MongoDB, Neo4j, Cassandra</li>
+                <li>MS Office - Word, PowerPoint</li>
             </ul>
         </div>
 
         <div class="block" id="projects">
             <h2>Mini Projects</h2>
             <div class="project-navigation">
-                <div class="project-container">
                     <div class="project-container">
                         <div class="project">
-                            <h3>Chest X-ray with CNN Classification (4th semester)</h3>
-                            <img src="images/project1.jpg" alt="Chest X-ray CNN Classification" class="project-img"><hr>
-                            <p>This project involves developing a deep learning model to classify chest X-ray images into normal and pneumonia-affected categories. The model uses a Convolutional Neural Network (CNN) built with TensorFlow and Keras.</p>
+                            <h3>Deepfake Detection Using Combined Models</h3>
+                            <img src="images/project2.jpg" alt="Deepfake Detection Using Combined Models" class="project-img"><hr>
+                            <p>Developed a deepfake detection system using Vision Transformer (ViT) and StyleGAN to analyze video frames and audio and determine if the content is real or fake. Used ViT to extract important features from images and StyleGAN to identify fake facial patterns. Combined both visual and audio information to improve accuracy.</p>
                         </div>
                         <div class="project">
-                            <h3>Chat-with-pdf(LLaMa-3-RAG-PDF)</h3>
-                            <img src="images/chat_pdf.jpeg" alt="Chat-with-pdf" class="project-img"><hr>
-                            <p>This project contains a Streamlit-based web application for interacting with machine learning models and vector databases.</p>
-                        </div>
-                        <div class="project">
-                            <h3>Insurance Data Analysis (4th semester)</h3>
-                            <img src="images/project2.jpg" alt="Insurance Data Analysis" class="project-img"><hr>
-                            <p>This project aims to evaluate and predict the best insurance company by analyzing various performance metrics and customer satisfaction data. The analysis involves collecting data on multiple insurance companies, including metrics such as claim settlement ratio, customer reviews, policy offerings, premium costs, and financial stability.</p>
+                            <h3>Image Enhancement using SRGAN</h3>
+                            <img src="images/project4.jpeg" alt="Image Enhancement using SRGAN" class="project-img"><hr>
+                            <p>Developed an image enhancement system using Super-Resolution Generative Adversarial Network (SRGAN) to upscale low-resolution images while preserving details and texture. Trained SRGAN on high-quality image datasets to generate realistic and sharp outputs.</p>
                         </div>
                         <div class="project">
                             <h3>Transport Data System Management (3rd semester)</h3>
@@ -112,20 +108,33 @@
                             <p>This project focuses on developing a comprehensive transport data management system utilizing Python and MySQL to streamline and optimize transportation operations. The system aims to manage and analyze transport data, including vehicle details, routes, schedules, and driver information.</p>
                         </div>
                         <div class="project">
-                            <h3>Banking Management in Linked List (3rd semester)</h3>
-                            <img src="images/project4.jpg" alt="Banking Management in Linked List" class="project-img"><hr>
-                            <p>This project involves developing a banking management system utilizing linked lists to manage customer accounts and transactions. The system is designed to handle various banking operations, including account creation, balance checking, deposits, withdrawals, and transaction history.</p>
+                            <h3>Chest X-ray with CNN Classification (4th semester)</h3>
+                            <img src="images/project1.jpg" alt="Chest X-ray CNN Classification" class="project-img"><hr>
+                            <p>This project involves developing a deep learning model to classify chest X-ray images into normal and pneumonia-affected categories. The model uses a Convolutional Neural Network (CNN) built with TensorFlow and Keras.</p>
+                        </div>
+                        <div class="project">
+                            <h3>Recipe Recommendation in NoSQL database</h3>
+                            <img src="images/image1.jpg" alt="Recipe Recommendation in NoSQL database" class="project-img"><hr>
+                            <p>Developed a Flask-based web application that allows users to search, generate, and combine recipes using MongoDB and Cohere AI. Implemented functionality to search for recipe variants from a database and dynamically generate recipe instructions using Cohere if no matching variant is found.</p>
+                        </div>
+                        <div class="project">
+                            <h3>Chat-with-pdf(LLaMa-3-RAG-PDF)</h3>
+                            <img src="images/chat_pdf.jpeg" alt="Chat-with-pdf" class="project-img"><hr>
+                            <p>Developed a Streamlit-based web application for interacting with machine learning models and vector databases. Implemented functionalities for training, evaluating, and managing models through an intuitive web interface.</p>
                         </div>
                     </div>
-                </div>
             </div>
         </div>
         <div class="block" id="certificates">
             <h2>Certificates</h2>
             <ul>
                 <li>Programming with JAVA (in NPTEL)</li>
+                <li>Responsible & Safe AI Systems (in NPTEL)</li>
                 <li>Basic HTML Language (in Bignary)</li>
                 <li>C++ Programming (in Bharathidasan University)</li>
+                <li>Certificate of appreciation for participated in MEPEXPO'24</li>
+                <li>Certificate of participation in Internal Hackathon for SIH 2024</li>
+                <li>Certificate of participation in 3 day capacity building program</li>
             </ul>
         </div>
 
@@ -156,8 +165,8 @@
 
         <div class="block" id="personal-details">
             <h2>Personal Details</h2>
-            <p>Father’s Name: S. Raj Mohan</p>
-            <p>Mother’s Name: R. Murugeswari</p>
+            <p>Father's Name: S. Raj Mohan</p>
+            <p>Mother's Name: R. Murugeswari</p>
             <p>DOB: 31-05-2005</p>
             <p>Marital Status: Unmarried</p>
             <p>Address: 117/147, Pandiyan Nagar, 1st street, Thiruthangal</p>
@@ -183,22 +192,34 @@
         </form>
     </footer>
     <script>
-        function toggleMenu() {
-            var menu = document.getElementById('navbar-menu');
-            menu.classList.toggle('show');
-        }
         document.addEventListener('DOMContentLoaded', function() {
-            const hamburgerMenu = document.getElementById('hamburger-menu');
-            const navLinks = document.getElementById('nav-links');    
-            hamburgerMenu.addEventListener('click', function() {
-                navLinks.classList.toggle('show');
-            });
-            navLinks.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', function() {
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const navLinks = document.getElementById('nav-links');
+        hamburgerMenu.addEventListener('click', function(e) {
+            e.stopPropagation();
+            navLinks.classList.toggle('show');
+        });
+        document.addEventListener('click', function(e) {
+            if (!navLinks.contains(e.target) && !hamburgerMenu.contains(e.target)) {
+                navLinks.classList.remove('show');
+            }
+        });
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 768) {
                     navLinks.classList.remove('show');
-                });
+                }
             });
         });
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                navLinks.classList.remove('show');
+                navLinks.style.display = 'flex';
+            } else {
+                navLinks.style.display = navLinks.classList.contains('show') ? 'flex' : 'none';
+            }
+        });
+    });
         document.addEventListener('DOMContentLoaded', function() {
             const feedbackForm = document.getElementById('feedback-form');
             feedbackForm.addEventListener('submit', function(e) {
@@ -212,6 +233,5 @@
             });
         });
     </script>
-    
 </body>
 </html>
